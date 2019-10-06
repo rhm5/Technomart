@@ -1,6 +1,6 @@
 # Technomart
 
-* Сайт: [Technomart](https://rhm5.github.io/Technomart/)
+* Сайт: [Technomart](https://5rhm5.gitlab.io/technomart/)
 * Дизайн: [HTML Academy](https://htmlacademy.ru/)
 
 ## Описание
