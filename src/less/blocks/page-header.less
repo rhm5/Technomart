@@ -1,0 +1,269 @@
+.page-header { 
+  margin-bottom: 20px;
+  padding-bottom: 60px;
+  background: @primaryBack-2;
+}
+
+.page-header__wrapper {
+  display: flex;
+  .container();
+  &--mid{
+    flex-wrap: wrap;
+  }
+}
+
+.page-header__top {   
+  background: @secondaryBack;
+  color: @primaryColor-2;  
+}
+
+.page-header__logo {
+  padding: 10px 55px 8px 55px;  
+  background: @tertiaryColor;   
+  box-shadow: 0 5px 0 0 @tertiaryBack-2;
+  .font(short; 24px; 24px; 400);   
+  text-transform: uppercase;
+  transition: 0.3s linear, box-shadow 1.3s linear;
+  cursor: pointer;
+  &:hover {
+    background: @tertiaryBack-3;
+    box-shadow: 0 5px 0 0 @tertiaryBack-4;
+  }
+  &:active {
+    background: @tertiaryBack-5;
+    box-shadow: 0 5px 0 0 @tertiaryBack-6;
+  }
+}
+
+.page-header__search {
+  input[type="search"]{
+    width: 270px;
+    padding: 12px 50px 12px 48px;
+    background: @secondaryBack;
+    background-image: url("../img/sprite.png");
+    background-repeat: no-repeat;
+    background-position: -22px -1600px;
+    color: @primaryColor-2;
+    .font(full; 17px; 18px);
+    transition: background-color 0.3s linear;
+    &:hover {
+      background-color: @secondaryBack-3;
+      background-image: url("../img/sprite.png");
+      background-repeat: no-repeat;
+      background-position: -22px -1794px;
+    }
+    &:focus {
+      background-color: @white;
+      background-image: url("../img/sprite.png");
+      background-repeat: no-repeat;
+      background-position: -22px -1697px;
+      color: @primaryColor;
+    }
+    &::placeholder {  
+    color: @primaryColor-2;
+    .font(full; 17px; 18px);
+    }
+  }
+}
+
+.page-header__btn {
+  width: 150px;
+  padding: 12px 0 12px 17px;
+  background-color: @secondaryBack;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  .font(shortest; 17px; 18px);
+  text-align: center;
+  transition: background-color 0.3s linear, color 0.3s linear;
+  &:hover {
+    background-color: @secondaryBack-3;
+  }
+  &:active {
+    background-color: @secondaryBack-4;
+    color: @primaryColorAlpha;
+  }
+  &--book {
+    background-position: -22px -315px;
+    &:hover {
+      background-position: -22px -507px;
+    }
+    &:active {
+      background-position: -22px -411px;
+    }
+  }
+  &--cart {
+    background-position: -25px -28px;
+    &:hover {
+      background-position: -25px -220px;
+    }
+    &:active {
+      background-position: -25px -124px;
+    }
+    &-catalog {
+      background-color: @tertiaryBack;
+      background-position: -25px -28px;
+      &:hover {
+        background-color: @tertiaryBack-3;
+        background-position: -25px -220px;
+      }
+      &:active {
+        background-color: @tertiaryBack-5;
+        background-position: -25px -28px;
+      }
+    }
+  }
+     &--order {
+    padding: 12px 10px;
+    background-color: #63a63e;
+    background-image: none;
+    &:hover {
+      background-color: #5fbb2d;
+    }
+    &:active {
+      background-color: #518534;
+    }
+  }  
+}
+
+.page-header__mid {
+  display: flex;
+  padding: 46px 0 40px 0;
+}
+
+.page-header__descr {
+  width: 300px;
+  padding: 3px 50px 0 52px;
+  color: @tertiaryColor;
+  .font(shortest; 16px; 23px);
+  font-style: italic;
+}
+
+.page-header__contacts {
+  width: 320px;
+  padding: 0 30px 0 20px;
+}
+
+.page-header__tel {
+  margin-bottom: 5px;
+  padding: 8px 45px 8px 71px;
+  border: 3px solid #fff;
+  background: url("../img/sprite.png") no-repeat -27px -1385px;
+  color: #e9292a;
+  .font(shortest; 21px; 23px);
+}
+
+.page-header__address {
+  color: @altColor;
+  .font(shortest; 14px; 22px);
+  text-align: center;
+}
+
+.page-header__user {
+  width: 320px;
+  padding-left: 39px;
+  font-size: 0;
+  &--catalog{
+    padding-left: 20px;
+  }
+}
+
+.page-header__user-btn {
+  .def-ib();
+  background-color: @primaryBack;
+  color: @primaryColor;
+  .font(shortest; 21px; 23px);
+  transition: color 0.3s linear, opacity 0.3s linear;
+  &:hover {
+    color: @tertiaryColor;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+  &--login {
+    width: 120px;
+    margin-right: 10px;
+    padding: 11px 26px 11px 47px;
+    background-image: url("../img/sprite.png");
+    background-repeat: no-repeat;
+    background-position: -25px -1186px;
+    &:hover{
+      background-position: -25px -1283px;
+    }
+    &:active {
+      background-position: -25px -1186px;
+    }
+  }
+   &--sign {
+    width: 150px;
+    padding: 11px 26px 11px 25px;
+  }
+}
+
+.page-header__username {
+  margin-bottom: 3px;
+  padding: 13px 0 14px 47px;
+  background-color: @primaryBack;
+  background-image: url("../img/sprite.png"), url("../img/sprite.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: 225px -1185px, -25px -2162px;
+  .font(shortest; 21px; 18px);
+   transition: opacity 0.3s linear;
+  &:hover {
+    background-position: 225px -1282px, -25px -2260px;
+    cursor: pointer;
+  }
+  &:active {
+    background-position: 225px -1185px, -25px -2162px;
+    opacity: 0.6;
+  }
+}
+
+.page-header__link {
+  margin: 0 16px 0 18px;
+  color: @altColor;
+  .font(shortest; 16px; 18px);
+  transition: color 0.3s linear, opacity 0.3s linear;
+  text-decoration: underline;
+  &:hover {
+    color: @tertiaryColor;
+  }
+  &:active {
+    color: @altColor;
+    opacity: 0.6;
+  }
+  &--orders {
+    position: relative;
+    &::after {
+      .def-pseudo();
+      top: 8px;
+      right: -21px;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: @secondaryBack-2;
+    }
+  }
+}
+
+.page-header__nav {
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

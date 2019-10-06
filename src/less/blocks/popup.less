@@ -1,0 +1,122 @@
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 30;
+  width: 620px;
+  height: 430px;
+  margin-top: -215px;
+  margin-left: -310px;
+  padding: 50px 80px;
+  border-top: 7px solid @tertiaryBack;
+  background: @primaryBack;
+  box-shadow: 0 20px 35px #626363;
+  transform: scale(0);
+  transition: transform 0.4s linear;
+  &--opened {
+    transform: scale(1);
+  }
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.popup__btn {
+  &--close {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 41px;
+    height: 41px;
+    padding: 0;
+    border-radius: 50%;
+    background: none;
+    font-size: 0;
+    &:hover {
+      background: none;
+    }
+    &:active {
+      background: none;
+    }
+    &::before,
+    &::after {
+      .def-pseudo();
+      top: 10px;
+      right: 15px;
+      width: 5px;
+      height: 25px;
+      transform: rotate(45deg);
+      background: @tertiaryBack;
+      transition: background 0.3s linear;
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+     &:hover::before,
+    &:hover::after {
+      background: #ca2c37;
+    }
+  }
+  &--send {
+    width: 100%;
+  }
+}
+
+.popup__form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.popup__group {
+  &:last-of-type {
+    width: 100%;
+  }
+}
+
+.popup__label {
+  display: block;
+  margin-bottom: 10px;
+  color: @primaryColor;
+  .font(short; 18px; 18px; 500);
+}
+
+.popup__text,
+.popup__message {
+  width: 220px;
+  margin-bottom: 20px;
+  padding: 8px 15px;
+  border: 2px solid #d7dcde;
+  border-radius: 3px;
+  outline: none;
+  .font(full; 13px; 18px; @primaryFF; 500);
+  cursor: pointer;
+  transition: border-color 0.3s linear;
+  &:hover {
+    border: 2px solid #a2a9ac;
+  }
+  &:focus {
+    border: 2px solid #56bffb;
+  }
+  &::placeholder {
+    color: #999999;
+    .font(full; 13px; 18px; @secondaryFF);
+    text-transform: none;
+  }
+}
+
+.popup__message {
+  width: 100%;
+  max-width: 100%;
+  height: 114px;
+  max-height: 114px;
+  margin-bottom: 40px;
+}

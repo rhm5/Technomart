@@ -1,0 +1,27 @@
+.nav__list {
+  display: flex;
+  width: 100%;
+}
+
+.nav__item {
+  flex-grow: 1;  
+}
+
+.nav__item a {
+  display: block;
+  padding: 20px 0 18px 0;
+  border-bottom: 5px solid @secondaryBack;
+  background: @secondaryBack-2;
+  color: @primaryColor-2;
+  .font(shortest; 17px; 17px);
+  text-align: center;
+  transition: background 0.3s linear, color 0.3s linear, border-color 0.3s linear;
+  &:hover {
+    background: #1d2739;
+    border-bottom: 5px solid #1d2739;
+  }  
+  &:active {
+    color: @primaryColorAlpha;
+  }
+}
+

@@ -1,0 +1,128 @@
+.product {
+  position: relative;
+  z-index: 1;
+  .font(full; 17px; 18px; @secondaryFF; 700);
+  text-align: center;
+  &:hover {
+    .product__actions{
+      transform: scale(1);
+    }
+  }
+  &--new {
+    &::before{
+      .def-pseudo();
+      top: -1px;
+      right: -1px;
+      z-index: 5;
+      width: 60px;
+      height: 60px;
+      background: url("../img/new.png") no-repeat;
+    }
+    .product__price--old {
+      visibility: hidden;
+    }
+  }
+}
+
+.product__photo {
+  margin-top: 5px;
+  margin-bottom: 8px;
+  margin-left: 0;
+  width: 218px;
+  height: 168px;
+}
+
+.product__name {
+  margin-bottom: 11px;
+  padding: 0 25px;
+  .font(shortest; 18px; 20px);
+}
+
+.product__price {
+  &--old {
+    margin-bottom: 10px;
+    color: #999999;
+    text-decoration: line-through;
+  }
+  &--new {
+    position: relative;
+    .def-ib();
+    min-width: 140px;
+    padding: 10px 0;
+    border-radius: 3px;
+    background: @tertiaryBack;
+    color: @primaryColor-2;
+    text-align: center;
+    &::after {
+      .def-pseudo();
+      top: 0;
+      right: -20px;
+      width: 0;
+      height: 0;
+      border: 20px solid @primaryBack;
+      border-bottom-width: 18px;
+      border-left-color: @tertiaryBack;
+    }
+  }
+}
+
+.product__actions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transform: scale(0);
+  width: 100%;
+  height: 168px;
+  padding: 40px 0;
+  background: @primaryBack;
+  transition: transform 0.3s;
+}
+
+.product__btn {
+  .def-ib();
+  width: 135px;
+  margin-bottom: 7px;
+  padding: 10px 20px;
+  background-color: #63a63e;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-position: -27px -30px;
+  box-shadow: inset 0 -3px 0 0 rgba(54,115,21,1);
+  font-weight: normal;
+  transition-property: color, background-color, box-shadow, border-color, opacity;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+  .font(full; 14px; 18px);
+  &--bookmark {
+    width: 135px;
+    padding: 7px 0;
+    border: 3px solid #63a63e;
+    background: @primaryBack;
+    box-shadow: none;
+    color: @altColor;
+    &:hover {
+      border: 3px solid @secondaryBack-2;
+      background: transparent;
+    }
+     &:active {
+      opacity: 0.3;
+    }
+  }
+   &--buy {
+    &:hover {
+      background-color: #5fbb2d;
+      background-image: url("../img/sprite.png");
+      background-repeat: no-repeat;
+      background-position: -27px -222px;
+      box-shadow: inset 0 -3px 0 0 #367315;
+    }
+      &:active {
+      background-color: #518534;
+      background-image: url("../img/sprite.png");
+      background-repeat: no-repeat;
+      background-position: -27px -126px;
+      box-shadow: none;
+    }
+  }
+}

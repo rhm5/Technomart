@@ -1,0 +1,81 @@
+.description {
+  padding: 79px 0 86px 0;
+}
+
+.description__wrapper {
+  display: flex;
+  justify-content: space-between;
+  .container();
+}
+
+.description__info {
+  width: 540px;
+}
+
+.description__title {
+  margin-bottom: 26px;
+  .font(shortest; 30px; 30px);
+  text-transform: uppercase;
+}
+
+.description__descr {
+  margin-bottom: 24px;
+  .font(full; 13px; 24px; @secondaryFF);
+  &:nth-of-type(2) {
+    margin-bottom: 20px;
+  }
+}
+
+.description__list {
+  margin-bottom: 37px;
+}
+
+.description__list-item {
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 35px;
+  .font(full; 18px; 20px; @primaryFF; 500);
+  &::before{
+    .def-pseudo();
+    bottom: 50%;
+    left: 0;
+    width: 25px;
+    height: 2px;
+    background: #fb565a;
+  }
+}
+
+.description__contacts {
+  width: 300px;
+}
+
+.description__contacts .description__descr {
+  margin-bottom: 31px;
+}
+
+.description__map {
+  display: block;
+  margin-bottom: 35px;
+}
+
+.description__btn {
+  padding: 10px 41px;
+}
+
+.description__contacts .description__btn {
+  .def-ib();
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.description__map {
+  width: 100%;
+  height: 158px;
+  background: @altBack url("../img/map.png");
+}
+
+.map__api {
+  width: 100%;
+  height: 158px;
+}

@@ -1,0 +1,48 @@
+.breadcrumbs {
+  margin-bottom: 20px;
+}
+
+.breadcrumbs__item {
+  position: relative;
+  display: inline;
+  padding-right: 36px;
+  &::after{
+    .def-pseudo();
+    top: 7px;
+    right: 13px;
+    width: 9px;
+    height: 9px;    
+    border-radius: 1px;
+    border-right: 2px solid #cbcbcd;
+    border-bottom: 2px solid #cbcbcd;
+    transform: rotate(-45deg);
+  }
+  &--active{
+    &::after{
+      display: none;
+    }
+  }
+}
+
+.breadcrumbs__item a {
+  color: @primaryColor;
+  .font(full; 12px; 18px; @secondaryFF);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: opacity 0.3s linear;
+  &[href]:hover {
+    text-decoration: underline;
+  }
+  &[href]:active {
+    opacity: 0.6;
+    text-decoration: none;
+  }
+}
+
+.breadcrumbs__home {
+  .def-ib();
+  width: 16px;
+  height: 12px;
+  margin-top: 5px;
+  background: url("../img/sprite.png") no-repeat -70px -3249px;
+}
